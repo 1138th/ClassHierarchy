@@ -3,9 +3,7 @@ package Flowers;
 public abstract class Flower {
 
     private String name;
-
     private int price;
-
     private int quantity;
 
     public String getName(){

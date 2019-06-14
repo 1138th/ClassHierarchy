@@ -1,4 +1,4 @@
 package Flowers;
 
-class Rose extends Flower {
+public class Rose extends Flower {
 }
