@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec397491-c984-4a86-9a53-bca2ae0a84d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Flowers/Peony.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utilities/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BouquetCreatable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Bouquet/BouquetCreatable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ClassHierarchy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ClassHierarchy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Flowers/BlueRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Flowers/BlueRose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Flowers/Flower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Flowers/Flower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Flowers/Pion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Flowers/RedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Flowers/RedRose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Flowers/Rose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Flowers/Rose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Flowers/Violet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Flowers/Violet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Bouquet/CreateBouquet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/BouquetCreatable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ClassHierarchy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ClassHierarchy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Flowers/BlueRose.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Flowers/BlueRose.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Flowers/Pion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Flowers/RedRose.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Flowers/RedRose.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Flowers/Rose.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Flowers/Rose.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Flowers/Violet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Flowers/Violet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Shop.class" beforeDir="false" />
-    </list>
+    <list default="true" id="ec397491-c984-4a86-9a53-bca2ae0a84d6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ClassHierarchy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="65" lean-forward="true" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+            <state relative-caret-position="136">
+              <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/Utilities/Stock.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -261,13 +240,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560507472065</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Filled package Flowers. Rose - parent class to RedRose and BlueRose. Added package Utilities implements printing flowers stock.">
+      <created>1560545125040</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1560545125040</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16414523" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16641453" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -339,7 +326,8 @@
     <MESSAGE value="Task description replaced to individual text file." />
     <MESSAGE value="Task description replaced to root directory. Added package Flowers includes abstract Flower and daughter-flowers-classes." />
     <MESSAGE value="Added example of flower violet." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added example of flower violet." />
+    <MESSAGE value="Filled package Flowers. Rose - parent class to RedRose and BlueRose. Added package Utilities implements printing flowers stock." />
+    <option name="LAST_COMMIT_MESSAGE" value="Filled package Flowers. Rose - parent class to RedRose and BlueRose. Added package Utilities implements printing flowers stock." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
