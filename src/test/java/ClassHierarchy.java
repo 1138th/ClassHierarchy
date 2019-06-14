@@ -1,6 +1,5 @@
 public class ClassHierarchy {
     public static void main(String[] args) {
-
     }
 }
 /*Задание: Определить иерархию цветов. Создать несколько объектов-цветов. Собрать букет с определением его стоимости.
