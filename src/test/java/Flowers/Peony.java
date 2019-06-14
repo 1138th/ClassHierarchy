@@ -1,20 +1,20 @@
 package Flowers;
 
-public class Violet extends Flower{
+public class Peony extends Flower {
 
     private String  name;
     private int price;
     private int quantity;
 
-    public Violet(){
-        this.name = "violet";
+    public Peony(){
+        this.name = "peony";
         this.price = 500;
         this.quantity = 20;
     }
 
     @Override
     public String toString() {
-        return ("violets: \t\t" +
+        return ("peonies: \t\t" +
                 "price = " + price + "\t" +
                 "quantity = " + quantity);
     }

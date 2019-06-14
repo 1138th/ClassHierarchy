@@ -1,12 +1,12 @@
 import Flowers.*;
+import Utilities.Stock;
 
 public class ClassHierarchy {
     public static void main(String[] args) {
         Flower violet = new Violet();
-        System.out.println(violet.getName() + ", " + violet.getPrice() + ", " + violet.getQuantity());
-        violet.setQuantity(50);
-        violet.setPrice(300);
-        System.out.println(violet.getName() + ", " + violet.getPrice() + ", " + violet.getQuantity());
-
+        Flower peony = new Peony();
+        Flower redRose = new RedRose();
+        Flower blueRose = new BlueRose();
+        new Stock().printStock(violet, peony, redRose, blueRose);
     }
 }
