@@ -1,3 +1,3 @@
 interface BouquetCreatable {
-    void CreateBouquet();
+    void createBouquet();
 }
