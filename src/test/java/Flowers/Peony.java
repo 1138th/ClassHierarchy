@@ -14,9 +14,9 @@ public class Peony extends Flower {
 
     @Override
     public String toString() {
-        return ("peonies: \t\t" +
-                "price = " + price + "\t" +
-                "quantity = " + quantity);
+        return ("peonies:\t" +
+                "price: " + price + ",\t" +
+                "quantity: " + quantity);
     }
 
     @Override

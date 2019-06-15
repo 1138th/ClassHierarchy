@@ -10,8 +10,8 @@ public class RedRose extends Rose {
 
     @Override
     public String toString() {
-        return ("red roses: \t\t" +
-                "price = " + price + "\t" +
-                "quantity = " + quantity);
+        return ("red roses:\t" +
+                "price: " + price + ",\t" +
+                "quantity: " + quantity);
     }
 }

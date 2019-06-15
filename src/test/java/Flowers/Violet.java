@@ -14,9 +14,9 @@ public class Violet extends Flower{
 
     @Override
     public String toString() {
-        return ("violets: \t\t" +
-                "price = " + price + "\t" +
-                "quantity = " + quantity);
+        return ("violets:\t" +
+                "price: " + price + ",\t" +
+                "quantity: " + quantity);
     }
 
     @Override

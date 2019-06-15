@@ -1,12 +1,13 @@
 import Flowers.*;
 import Utilities.Stock;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ClassHierarchy {
     public static void main(String[] args) {
-        Flower violet = new Violet();
-        Flower peony = new Peony();
-        Flower redRose = new RedRose();
-        Flower blueRose = new BlueRose();
-        new Stock().printStock(violet, peony, redRose, blueRose);
+        Map<Integer, Flower> stock = new HashMap<Integer, Flower>();
+        stock = new Stock().initializeStock();
+        Stock.printStock(stock);
     }
 }
