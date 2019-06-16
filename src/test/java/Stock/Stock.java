@@ -1,13 +1,13 @@
-package Utilities;
+package Stock;
 
 import Flowers.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Stock {
+public class Stock implements StockUsable{
 
-    public Map<Integer, Flower> initializeStock(){
+    public Map<Integer, Flower> createStock(){
         Flower violet = new Violet();
         Flower peony = new Peony();
         Flower redRose = new RedRose();
@@ -20,9 +20,13 @@ public class Stock {
         return  stock;
     }
 
-    public static void printStock(Map<Integer, Flower> stock){
+    public void printStock(Map<Integer, Flower> stock){
         for (Map.Entry<Integer, Flower> item: stock.entrySet()) {
             System.out.println(item.getValue());
         }
+    }
+
+    public void clearStock(Map<Integer, Flower> stock){
+        stock.clear();
     }
 }
