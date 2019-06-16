@@ -7,9 +7,11 @@ import java.util.Map;
 
 interface BouquetUsable {
 
+    Map createBouquet();
+
     boolean canCreateBouquet(String[] array);
 
-    Map createBouquet(Map<Integer, Flower> map, String[] string);
+    Map fillBouquet(Map<Integer, Flower> map, Map<Integer, Flower> map2, String[] string);
 
-    void clearBouquet(Map<Integer, HashMap<Flower, Integer>> map);
+    int sellBouquet(Map<Integer, Flower> map);
 }

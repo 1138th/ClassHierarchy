@@ -12,9 +12,10 @@ public class ClassHierarchy {
 
         //------------------------- initialize block -------------------------
         Map<Integer, Flower> stock = new HashMap<Integer, Flower>();
-        Map<Integer, Map<Integer, HashMap<Flower, Integer>>> bouquet = new HashMap<Integer, Map<Integer, HashMap<Flower, Integer>>>();
+        Map<Integer, Flower> bouquet = new HashMap<Integer, Flower>();
         int bouquetIndex = 0;
         stock = new Stock().createStock();
+        bouquet = new Bouquet().createBouquet();
         Scanner scan = new Scanner(System.in);
         String input;
         String[] array;
@@ -60,7 +61,7 @@ public class ClassHierarchy {
             System.out.println("available commands:\n" +
                     "stock\t\tshow flowers' names, quantities and prices in actual stock\n" +
                     "bouquet\t\tinitiate bouquet creating\n" +
-                    "mybouquets\tshow collected bouquets\n" +
+                    "mybouquet\tshow collected bouquets\n" +
                     "update\t\tadd flowers to stock (by default adding random values)\n" +
                     "exit\t\tquit from shop");
             input = scan.nextLine();
@@ -77,29 +78,20 @@ public class ClassHierarchy {
                             System.out.println("please enter information for making bouquet correctly:\n" +
                                     "{flower_name} {flower_quantity} [{flower_name} {flower_quantity} etc]");
                         else{
-                            bouquet.put(bouquetIndex++, new Bouquet().createBouquet(stock, array));
+                            bouquet = new Bouquet().fillBouquet(stock, bouquet, array);
                         }
                     }
                 }
                 input = "null";
-            } else if (input.equals("mybouquets")) {
-                for (Map.Entry<Integer, Map<Integer, HashMap<Flower, Integer>>> item: bouquet.entrySet()) {
-                    System.out.println("bouquet " + (item.getKey() + 1) + ": ");
-                    for (Map.Entry<Integer, HashMap<Flower, Integer>> nestedItem: item.getValue().entrySet()) {
-                        for (Map.Entry<Flower, Integer> nestedNestedItem :nestedItem.getValue().entrySet()){
-                            System.out.println("\tflower: " + nestedNestedItem.getKey().getName() +
-                                    "\tquantity: " + nestedNestedItem.getValue());
-                        }
-                    }
-                }
+            } else if (input.equals("mybouquet")) {
+                new Stock().printStock(bouquet);
+                System.out.println("bouquet cost: " + new Bouquet().sellBouquet(bouquet));
             }
+            else if (input.equals("update")) new Stock().updateStock(stock);
         }
-
         //------------------------- clearing all after work -------------------------
-        for (Map.Entry<Integer, Map<Integer, HashMap<Flower, Integer>>> item: bouquet.entrySet()) {
-            bouquet.get(item.getKey()).clear();            
-        }
         new Stock().clearStock(stock);
+        new Stock().clearStock(bouquet);
         scan.close();
 
     }

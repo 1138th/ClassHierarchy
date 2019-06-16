@@ -1,7 +1,5 @@
 package Flowers;
 
-import ValueFiller.FillValue;
-
 public class Violet extends Flower{
 
     private String  name;
@@ -10,8 +8,8 @@ public class Violet extends Flower{
 
     public Violet(){
         this.name = "violet";
-        this.price = FillValue.randomPrice();
-        this.quantity = FillValue.randomQuantity();
+        this.price = 500;
+        this.quantity = 20;
     }
 
     @Override

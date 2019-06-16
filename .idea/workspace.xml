@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec397491-c984-4a86-9a53-bca2ae0a84d6" name="Default Changelist" comment="">
+    <list default="true" id="ec397491-c984-4a86-9a53-bca2ae0a84d6" name="Default Changelist" comment="Edited in-bouquet and in-stock methods realizing internal program logic's interactions.&#10;Almost finished declaring all console interactions with user.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Bouquet/Bouquet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Bouquet/Bouquet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Bouquet/BouquetUsable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Bouquet/BouquetUsable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Bouquet/CreateBouquet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Bouquet/Bouquet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ClassHierarchy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ClassHierarchy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Flowers/BlueRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Flowers/BlueRose.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Flowers/Peony.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Flowers/Peony.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Flowers/RedRose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Flowers/RedRose.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Flowers/Violet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Flowers/Violet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Stock/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Stock/Stock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Stock/StockUsable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Stock/StockUsable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Bouquet/BouquetCreatable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Bouquet/CreateBouquet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ClassHierarchy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ClassHierarchy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Flowers/BlueRose.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Flowers/BlueRose.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Flowers/Peony.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Flowers/Peony.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Flowers/RedRose.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Flowers/RedRose.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Flowers/Violet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Flowers/Violet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Stock/Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Stock/Stock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Stock/StockUsable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Stock/StockUsable.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,12 +28,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ClassHierarchy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="79" column="54" selection-start-line="79" selection-start-column="54" selection-end-line="79" selection-end-column="54" />
+            <state relative-caret-position="314">
+              <caret line="86" column="48" selection-start-line="86" selection-start-column="48" selection-end-line="86" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#215#232#0" expanded="true" />
-                <element signature="e#445#494#0" expanded="true" />
+                <element signature="e#342#359#0" expanded="true" />
+                <element signature="e#413#430#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,12 +42,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Bouquet/Bouquet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+            <state relative-caret-position="-457">
+              <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1760#1761#0" expanded="true" />
-                <element signature="e#1791#1792#0" expanded="true" />
+                <element signature="e#408#425#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Stock/Stock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-697">
+              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,16 +107,16 @@
         <option value="$PROJECT_DIR$/src/test/java/ValueFiller/Randomizer.java" />
         <option value="$PROJECT_DIR$/src/test/java/ValueFiller/FillValue.java" />
         <option value="$PROJECT_DIR$/src/test/java/Bouquet/BouquetCreatable.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Bouquet/BouquetUsable.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Bouquet/CreateBouquet.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Stock/Stock.java" />
         <option value="$PROJECT_DIR$/src/test/java/Flowers/RedRose.java" />
         <option value="$PROJECT_DIR$/src/test/java/Flowers/BlueRose.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Bouquet/CreateBouquet.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Stock/StockUsable.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Stock/Stock.java" />
         <option value="$PROJECT_DIR$/src/test/java/Flowers/Peony.java" />
         <option value="$PROJECT_DIR$/src/test/java/Flowers/Violet.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ClassHierarchy.java" />
         <option value="$PROJECT_DIR$/src/test/java/Bouquet/Bouquet.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Bouquet/BouquetUsable.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Stock/StockUsable.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ClassHierarchy.java" />
       </list>
     </option>
   </component>
@@ -140,8 +141,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,6 +202,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -329,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560688947706</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Edited in-bouquet and in-stock methods realizing internal program logic's interactions.&#10;Almost finished declaring all console interactions with user.">
+      <created>1560705622972</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1560705622972</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -345,7 +353,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1732224" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17549168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -354,15 +362,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.19806764" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.15297906" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993559" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.15458937" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5015129" side_tool="true" weight="0.34621578" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50226927" side_tool="true" weight="0.8969404" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32850242" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49924356" weight="0.71497583" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49848714" weight="0.71497583" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -422,7 +430,8 @@
     <MESSAGE value="Finished stock-interaction methods. Added randomizer for stock's flowers' price and quantity. Began bouquets-interaction methods writing." />
     <MESSAGE value="Added bouquet-creator. Randomizer renamed to FillValue and placed to package ValueFiller. Stock-interaction methods' bugs fixed and added update stock function that adding all type flowers to stock." />
     <MESSAGE value="Initiated work in main-class. Small fixes of internal logic interactions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initiated work in main-class. Small fixes of internal logic interactions." />
+    <MESSAGE value="Edited in-bouquet and in-stock methods realizing internal program logic's interactions.&#10;Almost finished declaring all console interactions with user." />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited in-bouquet and in-stock methods realizing internal program logic's interactions.&#10;Almost finished declaring all console interactions with user." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -483,10 +492,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ValueFiller.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ValueFiller.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/ValueFiller/FillValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -497,65 +507,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ValueFiller/FillValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Flowers/RedRose.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Stock/StockUsable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Flowers/Peony.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Flowers/Violet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        <state relative-caret-position="153">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Flowers/BlueRose.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="153">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Stock/Stock.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Flowers/Peony.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
+        <state relative-caret-position="187">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Flowers/Violet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Bouquet/BouquetUsable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Bouquet/BouquetUsable.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Stock/StockUsable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        <state relative-caret-position="272">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -564,24 +557,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ClassHierarchy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="79" column="54" selection-start-line="79" selection-start-column="54" selection-end-line="79" selection-end-column="54" />
+        <state relative-caret-position="314">
+          <caret line="86" column="48" selection-start-line="86" selection-start-column="48" selection-end-line="86" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#215#232#0" expanded="true" />
-            <element signature="e#445#494#0" expanded="true" />
+            <element signature="e#342#359#0" expanded="true" />
+            <element signature="e#413#430#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Stock/Stock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-697">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Bouquet/Bouquet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        <state relative-caret-position="-457">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
-            <element signature="e#1791#1792#0" expanded="true" />
+            <element signature="e#408#425#0" expanded="true" />
           </folding>
         </state>
       </provider>

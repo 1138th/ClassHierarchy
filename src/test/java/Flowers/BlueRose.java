@@ -6,8 +6,8 @@ public class BlueRose extends Rose {
 
     public BlueRose(){
         this.name = "blue-rose";
-        this.price = FillValue.randomPrice();
-        this.quantity = FillValue.randomQuantity();
+        this.price = 800;
+        this.quantity = 50;
     }
 
     @Override

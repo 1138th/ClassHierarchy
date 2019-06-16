@@ -12,9 +12,9 @@ interface StockUsable {
 
     void editStock(Map<Integer, Flower> map, String[] array);
 
-    public void printStock(Map<Integer, Flower> map);
+    void printStock(Map<Integer, Flower> map);
 
-    public void updateStock(Map<Integer, Flower> map);
+    void updateStock(Map<Integer, Flower> map);
 
     void clearStock(Map<Integer, Flower> map);
 }
