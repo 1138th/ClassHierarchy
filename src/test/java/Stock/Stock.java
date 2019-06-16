@@ -22,7 +22,6 @@ public class Stock implements StockUsable{
     }
 
     public static void printStock(Map<Integer, Flower> stock){
-        System.out.println("stock:");
         for (Map.Entry<Integer, Flower> item: stock.entrySet()) {
             System.out.println("\t" + item.getValue());
         }

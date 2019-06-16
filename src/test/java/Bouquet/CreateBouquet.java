@@ -5,7 +5,7 @@ import Flowers.Flower;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CreateBouquet implements BouquetCreatable {
+public class CreateBouquet implements BouquetUsable {
 
     public boolean canCreateBouquet(String[] bouquetList){
         int isInteger;
@@ -36,5 +36,8 @@ public class CreateBouquet implements BouquetCreatable {
             }
         }
         return bouquet;
+    }
+
+    public void clearBouquet(Map<Integer, HashMap<Flower, Integer>> bouquet){
     }
 }
