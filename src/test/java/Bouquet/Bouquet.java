@@ -5,16 +5,17 @@ import Flowers.Flower;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CreateBouquet implements BouquetUsable {
+public class Bouquet implements BouquetUsable {
 
     public boolean canCreateBouquet(String[] bouquetList){
         int isInteger;
         if ((bouquetList.length % 2) != 0) return false;
         for (int i = 0; i < bouquetList.length; i += 2){
             if (!(bouquetList[i].equals("violet") || bouquetList[i].equals("peony") ||
-                    bouquetList[i].equals("red rose") || bouquetList[i].equals("blue rose")))  return false;
+                    bouquetList[i].equals("red-rose") || bouquetList[i].equals("blue-rose")))  return false;
             try {
                 isInteger = Integer.parseInt(bouquetList[i + 1]);
+                if (isInteger < 0) return false;
             } catch (NumberFormatException e){
                 return false;
             }
@@ -39,5 +40,6 @@ public class CreateBouquet implements BouquetUsable {
     }
 
     public void clearBouquet(Map<Integer, HashMap<Flower, Integer>> bouquet){
+        bouquet.clear();
     }
 }

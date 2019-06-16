@@ -5,14 +5,14 @@ import ValueFiller.FillValue;
 public class BlueRose extends Rose {
 
     public BlueRose(){
-        this.name = "blue rose";
+        this.name = "blue-rose";
         this.price = FillValue.randomPrice();
         this.quantity = FillValue.randomQuantity();
     }
 
     @Override
     public String toString() {
-        return ("blue roses:\t" +
+        return ("blue-rose:\t" +
                 "price: " + price + ",\t" +
                 "quantity: " + quantity);
     }
