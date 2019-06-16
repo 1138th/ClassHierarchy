@@ -6,5 +6,7 @@ import java.util.Map;
 
 interface BouquetCreatable {
 
+    boolean canCreateBouquet(String[] string);
+
     Map createBouquet(Map<Integer, Flower> map, String[] string);
 }

@@ -8,7 +8,5 @@ interface StockUsable {
 
     Map createStock();
 
-    void printStock(Map<Integer, Flower> map);
-
     void clearStock(Map<Integer, Flower> map);
 }

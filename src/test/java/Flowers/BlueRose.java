@@ -1,11 +1,13 @@
 package Flowers;
 
+import ValueFiller.FillValue;
+
 public class BlueRose extends Rose {
 
     public BlueRose(){
         this.name = "blue rose";
-        this.price = 500;
-        this.quantity = 20;
+        this.price = FillValue.randomPrice();
+        this.quantity = FillValue.randomQuantity();
     }
 
     @Override

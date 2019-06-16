@@ -1,6 +1,7 @@
 package Stock;
 
 import Flowers.*;
+import ValueFiller.FillValue;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,9 +21,16 @@ public class Stock implements StockUsable{
         return  stock;
     }
 
-    public void printStock(Map<Integer, Flower> stock){
+    public static void printStock(Map<Integer, Flower> stock){
+        System.out.println("stock:");
         for (Map.Entry<Integer, Flower> item: stock.entrySet()) {
-            System.out.println(item.getValue());
+            System.out.println("\t" + item.getValue());
+        }
+    }
+
+    public static void updateStock(Map<Integer, Flower> stock){
+        for (Map.Entry<Integer, Flower> item: stock.entrySet()) {
+            stock.get(item.getKey()).setQuantity(item.getValue().getQuantity() + FillValue.randomQuantity());
         }
     }
 
