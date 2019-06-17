@@ -78,7 +78,6 @@ public class ClassHierarchy {
                 new Stock().print(stock);
             }
             else if (input.equals("bouquet")){
-                bouquet = new Bouquet().create();
                 if (Stock.isEmpty(stock)){
                     System.out.println("Please use \"update\" to fill stock");
                 } else{
@@ -93,6 +92,7 @@ public class ClassHierarchy {
                         if (input.equals("stock")) {
                             new Stock().print(stock);
                         } else if (!input.equals("exit")) {
+                            bouquet = new Bouquet().create();
                             if (!Bouquet.canCreate(array)){
                                 System.out.println("Please enter information for making bouquet correctly:\n" +
                                         "\t{flower_name} {flower_quantity} [{flower_name} {flower_quantity} etc]");
@@ -110,7 +110,7 @@ public class ClassHierarchy {
                         new Bouquet().print(bouquet);
                         System.out.println("Bouquet cost: " + Bouquet.sell(bouquet) + "\n");
                     } else{
-                        System.out.println("You haven't any bouquets");
+                        System.out.println("You haven't any bouquets\n");
                     }
             }
             else if (input.equals("update")) {
@@ -119,7 +119,7 @@ public class ClassHierarchy {
         }
         //------------------------- CLEARING ALL AFTER WORK -------------------------
         new Stock().clear(stock);
-        new Stock().clear(bouquet);
+        new Bouquet().clear(bouquet);
         scan.close();
 
     }

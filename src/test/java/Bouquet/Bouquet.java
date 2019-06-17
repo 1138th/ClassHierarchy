@@ -65,6 +65,10 @@ public class Bouquet implements Usable {
     }
 
     public void clear(Map<Integer, Flower> bouquet){
-        bouquet.clear();
+        try {
+            bouquet.clear();
+        } catch (Exception e){
+            System.out.println("You had none bouquets.");
+        }
     }
 }
