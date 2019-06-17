@@ -2,29 +2,21 @@ package Bouquet;
 
 import Flowers.*;
 import Stock.Stock;
+import Utilities.Usable;
 
-import java.util.HashMap;
 import java.util.Map;
 
-public class Bouquet implements BouquetUsable {
+public class Bouquet implements Usable {
 
-    public Map<Integer, Flower> createBouquet(){
-        Flower violet = new Violet();
-        Flower peony = new Peony();
-        Flower redRose = new RedRose();
-        Flower blueRose = new BlueRose();
-        Map<Integer, Flower> bouquet = new HashMap<Integer, Flower>();
-        bouquet.put(0, violet);
-        bouquet.put(1, peony);
-        bouquet.put(2, redRose);
-        bouquet.put(3, blueRose);
+    public Map<Integer, Flower> create(){
+        Map<Integer, Flower> bouquet = new Stock().create();
         for (Map.Entry<Integer, Flower> item: bouquet.entrySet()) {
             bouquet.get(item.getKey()).setQuantity(0);
         }
         return  bouquet;
     }
 
-    public boolean canCreateBouquet(String[] bouquetList){
+    public static boolean canCreate(String[] bouquetList){
         int isInteger;
         if ((bouquetList.length % 2) != 0) return false;
         for (int i = 0; i < bouquetList.length; i += 2){
@@ -40,8 +32,8 @@ public class Bouquet implements BouquetUsable {
         return true;
     }
 
-    public Map<Integer, Flower> fillBouquet(Map<Integer, Flower> stock, Map<Integer, Flower> bouquet, String[] bouquetList) {
-        Map<Integer, Flower> localBouquet = new Stock().createStock();
+    public static Map<Integer, Flower> fill(Map<Integer, Flower> stock, Map<Integer, Flower> bouquet, String[] bouquetList) {
+        Map<Integer, Flower> localBouquet = new Stock().create();
         for (Map.Entry<Integer, Flower> item: localBouquet.entrySet()) {
             localBouquet.get(item.getKey()).setQuantity(bouquet.get(item.getKey()).getQuantity());
         }
@@ -57,11 +49,22 @@ public class Bouquet implements BouquetUsable {
         return localBouquet;
     }
 
-    public int sellBouquet(Map<Integer, Flower> bouquet){
+    public void print(Map<Integer, Flower> stock){
+        System.out.println("Your current bouquet:");
+        for (Map.Entry<Integer, Flower> item: stock.entrySet()) {
+            System.out.println("\t" + item.getValue().getName() + ": " + item.getValue().getQuantity());
+        }
+    }
+
+    public static int sell(Map<Integer, Flower> bouquet){
         int cost = 0;
         for (Map.Entry<Integer, Flower> item: bouquet.entrySet()) {
-            cost += item.getValue().getPrice();
+            cost += item.getValue().getPrice() * item.getValue().getQuantity();
         }
         return cost;
+    }
+
+    public void clear(Map<Integer, Flower> bouquet){
+        bouquet.clear();
     }
 }

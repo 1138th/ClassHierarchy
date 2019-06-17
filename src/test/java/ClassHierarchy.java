@@ -2,96 +2,124 @@ import Bouquet.Bouquet;
 import Flowers.*;
 import Stock.Stock;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class ClassHierarchy {
 
     public static void main(String[] args) {
+        //------------------------- INITIALIZE DATA BLOCK -------------------------
 
-        //------------------------- initialize block -------------------------
-        Map<Integer, Flower> stock = new HashMap<Integer, Flower>();
-        Map<Integer, Flower> bouquet = new HashMap<Integer, Flower>();
-        int bouquetIndex = 0;
-        stock = new Stock().createStock();
-        bouquet = new Bouquet().createBouquet();
+        Map<Integer, Flower> stock = new Stock().create();
+        Map<Integer, Flower> bouquet = null;
         Scanner scan = new Scanner(System.in);
         String input;
         String[] array;
 
-        //------------------------- creating stock block -------------------------
-        System.out.println("welcome to flower shop.\nyour stock:");
-        new Stock().printStock(stock);
+        //------------------------- PRINTING STOCK BLOCK -------------------------
 
-        //------------------------- editing stock block -------------------------
-        System.out.println("prices and quantities was generated randomly.\n" +
-                "you want to make changes? (y/n)");
+        System.out.println("Welcome to flower shop.\nYour stock:");
+        new Stock().print(stock);
+
+        //------------------------- EDITING STOCK BLOCK -------------------------
+
+        System.out.println("Prices and quantities are generated fixed.\n" +
+                "Do you want to make changes? (y/n)");
+
         input = scan.nextLine();
         while (!(input.equals("y") || input.equals("n"))){
-            System.out.println("please enter correct command (y/n)");
+            System.out.println("Please enter correct command (y/n)");
             input = scan.nextLine();
         }
+
         if (input.equals("y")){
-            System.out.println("enter changes you want to be made with next syntax:\n" +
-                    "{flower_name} {flower_price} {flower_quantity} [{flower_name} {flower_price} {flower_quantity} etc]" +
-                    "now you starting editing stock");
+            System.out.println("Enter changes you want to be made with next syntax:\n" +
+                    "\t{flower_name} {flower_price} {flower_quantity} [{flower_name} {flower_price} {flower_quantity} etc]\n" +
+                    "Now you starting editing stock");
+
             while (!input.equals("exit")){
-                System.out.println("available commands:\n" +
+                System.out.println("Available commands:\n" +
                         "stock\t\tshow flowers' names, quantities and prices in actual stock\n" +
                         "exit\t\tend editing stock");
                 input = scan.nextLine();
                 array = input.split(" ");
-                if (input.equals("stock")) new Stock().printStock(stock);
+
+                if (input.equals("stock")){
+                    new Stock().print(stock);
+                }
                 else if (!input.equals("exit")){
-                    if (!(new Stock().canEditStock(array))) System.out.println("please enter information for edit stock correctly:\n" +
-                            "{flower_name} {flower_price} {flower_quantity} [{flower_name} {flower_price} {flower_quantity} etc]");
+                    if (!Stock.canEdit(array)){
+                        System.out.println("Please enter information for editing stock correctly:\n" +
+                                "\t{flower_name} {flower_price} {flower_quantity} [{flower_name} {flower_price} {flower_quantity} etc]");
+                    }
                     else {
-                        new Stock().editStock(stock, array);
+                        Stock.edit(stock, array);
                     }
                 }
             }
-            System.out.println("you finished making changes");
-        } else System.out.println("you did not make any changes");
+            System.out.println("You finished making changes");
+        } else System.out.println("You did not make any changes");
 
-        //------------------------- starting work with flower shop -------------------------
+        //------------------------- STARTING WORK WITH FLOWER SHOP -------------------------
+
         input = "null";
-        System.out.println("now you starting to work with shop");
+        System.out.println("Now you starting work with shop");
+
         while (!input.equals("exit")){
-            System.out.println("available commands:\n" +
+            System.out.println("Available commands:\n" +
                     "stock\t\tshow flowers' names, quantities and prices in actual stock\n" +
                     "bouquet\t\tinitiate bouquet creating\n" +
-                    "mybouquet\tshow collected bouquets\n" +
+                    "mybouquet\tshow collected bouquet\n" +
                     "update\t\tadd flowers to stock (by default adding random values)\n" +
                     "exit\t\tquit from shop");
             input = scan.nextLine();
-            if (input.equals("stock")) new Stock().printStock(stock);
+
+            if (input.equals("stock")){
+                new Stock().print(stock);
+            }
             else if (input.equals("bouquet")){
-                System.out.println("type \"exit\" to finish making bouquet\n" +
-                        "now create bouquet by command:\n" +
-                        "{flower_name} {flower_quantity} [{flower_name} {flower_quantity} etc]");
-                while (!input.equals("exit")){
-                    input = scan.nextLine();
-                    array = input.split(" ");
-                    if (!input.equals("exit")) {
-                        if (!(new Bouquet().canCreateBouquet(array)))
-                            System.out.println("please enter information for making bouquet correctly:\n" +
-                                    "{flower_name} {flower_quantity} [{flower_name} {flower_quantity} etc]");
-                        else{
-                            bouquet = new Bouquet().fillBouquet(stock, bouquet, array);
+                bouquet = new Bouquet().create();
+                if (Stock.isEmpty(stock)){
+                    System.out.println("Please use \"update\" to fill stock");
+                } else{
+                    System.out.println("Type \"stock\" to view current stock\n" +
+                            "Type \"exit\" to finish making bouquet\n" +
+                            "Now create bouquet by command:\n" +
+                            "\t{flower_name} {flower_quantity} [{flower_name} {flower_quantity} etc]");
+                    while (!input.equals("exit")){
+                        input = scan.nextLine();
+                        array = input.split(" ");
+
+                        if (input.equals("stock")) {
+                            new Stock().print(stock);
+                        } else if (!input.equals("exit")) {
+                            if (!Bouquet.canCreate(array)){
+                                System.out.println("Please enter information for making bouquet correctly:\n" +
+                                        "\t{flower_name} {flower_quantity} [{flower_name} {flower_quantity} etc]");
+                            }
+                            else{
+                                bouquet = Bouquet.fill(stock, bouquet, array);
+                            }
                         }
                     }
+                    input = "null";
                 }
-                input = "null";
-            } else if (input.equals("mybouquet")) {
-                new Stock().printStock(bouquet);
-                System.out.println("bouquet cost: " + new Bouquet().sellBouquet(bouquet));
             }
-            else if (input.equals("update")) new Stock().updateStock(stock);
+                else if (input.equals("mybouquet")) {
+                    if (bouquet != null){
+                        new Bouquet().print(bouquet);
+                        System.out.println("Bouquet cost: " + Bouquet.sell(bouquet) + "\n");
+                    } else{
+                        System.out.println("You haven't any bouquets");
+                    }
+            }
+            else if (input.equals("update")) {
+                Stock.update(stock);
+            }
         }
-        //------------------------- clearing all after work -------------------------
-        new Stock().clearStock(stock);
-        new Stock().clearStock(bouquet);
+        //------------------------- CLEARING ALL AFTER WORK -------------------------
+        new Stock().clear(stock);
+        new Stock().clear(bouquet);
         scan.close();
 
     }

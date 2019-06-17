@@ -1,14 +1,15 @@
 package Stock;
 
 import Flowers.*;
-import ValueFiller.FillValue;
+import Utilities.FillValue;
+import Utilities.Usable;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Stock implements StockUsable{
+public class Stock implements Usable {
 
-    public Map<Integer, Flower> createStock(){
+    public Map<Integer, Flower> create(){
         Flower violet = new Violet();
         Flower peony = new Peony();
         Flower redRose = new RedRose();
@@ -21,7 +22,7 @@ public class Stock implements StockUsable{
         return  stock;
     }
 
-    public boolean canEditStock(String[] editingParameters){
+    public static boolean canEdit(String[] editingParameters){
         int isInteger;
         if ((editingParameters.length % 3) != 0) return false;
         for (int i = 0; i < editingParameters.length; i += 3){
@@ -43,7 +44,14 @@ public class Stock implements StockUsable{
         return true;
     }
 
-    public void editStock(Map<Integer, Flower> stock, String[] editingParameters){
+    public static boolean isEmpty(Map<Integer, Flower> stock){
+        for (Map.Entry<Integer, Flower> item: stock.entrySet()) {
+            if (item.getValue().getQuantity() == 0) return true;
+        }
+        return false;
+    }
+
+    public static void edit(Map<Integer, Flower> stock, String[] editingParameters){
         for (int i = 0; i < editingParameters.length; i += 3){
             for (Map.Entry<Integer, Flower> item: stock.entrySet()) {
                 if (editingParameters[i].equals(item.getValue().getName())){
@@ -55,23 +63,24 @@ public class Stock implements StockUsable{
         }
     }
 
-    public void printStock(Map<Integer, Flower> stock){
+    public void print(Map<Integer, Flower> stock){
         for (Map.Entry<Integer, Flower> item: stock.entrySet()) {
             System.out.println("\t" + item.getValue());
         }
+        System.out.println();
     }
 
-    public void updateStock(Map<Integer, Flower> stock){
+    public static void update(Map<Integer, Flower> stock){
         int addingQuantity;
         System.out.println("added:");
         for (Map.Entry<Integer, Flower> item: stock.entrySet()) {
-            addingQuantity = FillValue.randomQuantity();
+            addingQuantity = FillValue.fillQuantity();
             stock.get(item.getKey()).setQuantity(item.getValue().getQuantity() + addingQuantity);
             System.out.println("\t" + item.getValue().getName() + ": " + addingQuantity);
         }
     }
 
-    public void clearStock(Map<Integer, Flower> stock){
+    public void clear(Map<Integer, Flower> stock){
         stock.clear();
     }
 }

@@ -1,7 +1,5 @@
 package Flowers;
 
-import ValueFiller.FillValue;
-
 public class BlueRose extends Rose {
 
     public BlueRose(){
